@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detector</title>
+</head>
+<body>
+    <h1>Fake News Detector 📰</h1>
+    <form action="/predict" method="post">
+        <textarea name="news" rows="10" cols="80" placeholder="Paste your news text here..." required></textarea><br><br>
+        <input type="submit" value="Check News">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
